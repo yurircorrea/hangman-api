@@ -5,7 +5,7 @@
 ### About
 
 This application consists of an REST API, which implements the Hangman Game.
-It consists of a Java backend and a JavaScript frontend and will be submitted as coding assessment for Dell. 
+It consists of a Java backend and a JavaScript frontend and will be submitted as coding assessment for Dell.
 
 ### Main technologies:
 
@@ -26,19 +26,19 @@ It consists of a Java backend and a JavaScript frontend and will be submitted as
 
 ### Backend building and running
 
-* Compile and bundle the project:
+- Compile and bundle the project:
 
 ```shell
 mvn clean install
 ```
 
-* Execute the tests:
+- Execute the tests:
 
 ```shell
 mvn clean test
 ```
 
-* Run the project:
+- Run the project:
 
 ```shell
 mvn spring-boot:run
@@ -46,29 +46,28 @@ mvn spring-boot:run
 
 ### Frontend building and running
 
-* Access the ClientApp folder:
+- Access the ClientApp folder:
 
 ```shell
 cd ClientApp
 ```
 
-* Install the dependencies and build the project:
+- Install the dependencies and build the project:
 
 ```shell
-npm install    
+npm install
 ```
 
-* Run the project:
+- Run the project:
 
 ```shell
 npm start
 ```
 
-* The application will be automatically presented via your default web browser. If it doesn't happen, you can acess it at 
+- The application should be automatically presented via your default web browser. If it doesn't happen, you can acess it at
+
 ```text
 http://localhost:3000
 ```
 
-
 ## How to play the Hangman Game:
-
