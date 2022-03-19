@@ -1,0 +1,52 @@
+.Word {}
+
+.main-word{
+    margin:1em;
+}
+
+.letter-box{
+    display: inline-block;
+    border: 1px solid #fff;
+    border-radius: 20px 20px 20px 20px;
+    width:2.5em;
+    height:2.5em;
+    text-align: center;
+    padding: 0.5em;
+}
+
+
+.incorrect-letters{
+    height: 5em;
+    margin:1em;
+    border: 1px solid #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.keyboard{
+    padding:1em;
+    display:inline-block;
+    height: auto;
+    width: 40%;
+    margin:1em;
+    border: 1px solid #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.word-input{
+    padding:1em;
+    display:inline-block;
+    height: auto;
+    width: 40%;
+    margin:1em;
+    border: 1px solid #fff;
+    border-radius: 20px 20px 20px 20px;
+}
+
+
+.hangman-image{
+    margin:1em;
+}
+
+.note{
+    font-size: xx-small;
+}
