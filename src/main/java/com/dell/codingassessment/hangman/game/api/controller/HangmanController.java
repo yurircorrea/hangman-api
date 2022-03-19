@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.xml.sax.SAXException;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -225,6 +223,34 @@ public class HangmanController {
             return null;
         }
 
+        return game;
+    }
+
+    
+    @GetMapping(value = "guess_word/{word}")
+    public Game guessWord(@PathVariable String word){
+        Game game = this.getHangmanGame();
+
+        if(word == null){
+            return game;
+        }
+
+        if(game.isFinished()){
+            return game;
+        }
+
+        word = word.toUpperCase();
+
+        if(game.getWord().getWord().equals(word)){
+            ArrayList<String> correctLetters = new ArrayList<String>(Arrays.asList(word.split("")));
+            game.setCorrect(correctLetters);
+            game.setLetters_left(0);
+            game = checkendGame(game);
+        }else{
+            game.setLifes_left(0);
+            game = checkendGame(game);
+        }
+        
         return game;
     }
 
