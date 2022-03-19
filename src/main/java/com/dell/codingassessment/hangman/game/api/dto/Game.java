@@ -1,10 +1,14 @@
 package com.dell.codingassessment.hangman.game.api.dto;
 
-public class Game {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Game implements Serializable{
     private int lifes_left;
     private boolean finished;
     private int letters_left;
-    private String[] incorrect;
+    private ArrayList<String> incorrect;
+    private ArrayList<String> correct;
     private Word word;
 
     public int getLifes_left() {
@@ -31,13 +35,22 @@ public class Game {
         this.letters_left = letters_left;
     }
 
-    public String[] getIncorrect() {
+    public ArrayList<String> getIncorrect() {
         return incorrect;
     }
 
-    public void setIncorrect(String[] incorrect) {
+    public void setIncorrect(ArrayList<String> incorrect) {
         this.incorrect = incorrect;
     }
+
+    public ArrayList<String> getCorrect() {
+        return correct;
+    }
+
+    public void setCorrect(ArrayList<String> correct) {
+        this.correct = correct;
+    }
+
 
     public Word getWord() {
         return word;

@@ -1,9 +1,12 @@
 package com.dell.codingassessment.hangman.game.api.dto;
 
-public class Word {
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Word implements Serializable{
     private String word;
     private int qty_letters;
-    private String[] letters;
+    private ArrayList<String> letters;
 
     public String getWord() {
         return word;
@@ -21,11 +24,11 @@ public class Word {
         this.qty_letters = qty_letters;
     }
 
-    public String[] getLetters() {
+    public ArrayList<String> getLetters() {
         return letters;
     }
 
-    public void setLetters(String[] letters) {
+    public void setLetters(ArrayList<String> letters) {
         this.letters = letters;
     }
 }

@@ -21,8 +21,7 @@ class Home extends Component {
             <h1 className="display-1">The Hangman Game</h1>
           </div>
           <div className="App-body">
-            <div>Vidas Restantes: {game.lifes_left}</div>
-            <div>Palavra:</div>
+            <div>Word: {game.word?game.word.word:""}</div>
           </div>
         </header>
       </div>
