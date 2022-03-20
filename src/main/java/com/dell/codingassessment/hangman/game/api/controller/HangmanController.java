@@ -38,7 +38,7 @@ public class HangmanController {
     //Retrieves the list of words from the XML file
     //The XML file should be present at 'src/main/resources/words.xml'
     //If the file isn't present at the given path, exception will be thrown
-    private List<String> getListofWords(){
+    public List<String> getListofWords(){
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 
         try{
@@ -67,7 +67,7 @@ public class HangmanController {
     }
 
     //Generates a random word from a given words list
-    private String getNewRandomWord(List<String> wordsList){
+    public String getNewRandomWord(List<String> wordsList){
         try{
             Random r = new Random();
             int randomIndex = r.nextInt(wordsList.size());
@@ -78,7 +78,7 @@ public class HangmanController {
         }
     }
 
-    private boolean saveGame(Game g){
+    public boolean saveGame(Game g){
         File arq = new File("src/main/resources/game");
         try{
             arq.delete();
@@ -94,7 +94,7 @@ public class HangmanController {
         return true;
     }
 
-    private Game retrieveGame(){
+    public Game retrieveGame(){
         Game g = new Game();
         try{
             File arq = new File("src/main/resources/game");
@@ -167,7 +167,7 @@ public class HangmanController {
         return null;
     }
 
-    private int checkLetter(Word word, String letter){
+    public int checkLetter(Word word, String letter){
         ArrayList<String> wordLetters = word.getLetters();
 
         int occurrences = 0;
@@ -182,7 +182,7 @@ public class HangmanController {
     }
 
 
-    private Game incorrectLetterGuess(Game game, String letter){
+    public Game incorrectLetterGuess(Game game, String letter){
         game.setLifes_left(game.getLifes_left() - 1);  
         ArrayList<String> incorrect = game.getIncorrect();
         incorrect.add(letter);
@@ -197,7 +197,7 @@ public class HangmanController {
         return game;
     }
 
-    private Game correctLetterGuess(Game game, String letter, int occurrences){
+    public Game correctLetterGuess(Game game, String letter, int occurrences){
         game.setLetters_left(game.getLetters_left() - occurrences);
         ArrayList<String> correct = game.getCorrect();
         correct.add(letter);
@@ -212,7 +212,7 @@ public class HangmanController {
         return game;
     }
 
-    private Game checkendGame(Game game){
+    public Game checkendGame(Game game){
         if(game.getLifes_left() <= 0 || game.getLetters_left() <= 0){
             game.setFinished(true);
         }

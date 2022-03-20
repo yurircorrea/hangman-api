@@ -24,12 +24,10 @@ It consists of a Java backend and a JavaScript frontend and will be submitted as
 3. [Node Package Manager (npm)](https://nodejs.org/en/download/);
 4. Your preferred Text Editor or IDE;
 5. It is required that the JAVA_HOME and PATH variables are correctly set. The Java bin folder path should be added to the PATH variable, meanwhile the root Java folder path should be added to the JAVA_HOME variable. Maven and Node paths should be added automatically to the PATH variable during installation. If it doesn't happen, you must also add them manually;
-6. Check if your 8080 port is available.
+6. Check if your 8080 and 3000 ports are available.
 
 
-### Building and Running
-
-### Once inside the hangman-api root folder, follow the commands bellow:
+### Backend building and running
 
 - Compiling and bundling the project:
 
@@ -43,6 +41,8 @@ mvn install
 mvn test
 ```
 
+A test coverage report will be generated and inncluded at /target/site/index.html. You can open it on your favorite browser in order to check the test coverage.
+
 - Runnning the project:
 
 ```shell
@@ -50,12 +50,37 @@ mvn spring-boot:run
 ```
 - NOTE: In Windows systems, it is possible that Java or Node requires access to your private and public networks. Check both and allow it.
 
-- NOTE: The frontend will be automatically built and started, there is no need to run scripts in the client-app folder. 
 
-- The application should be available at:
-```text
-http://localhost:8080
+### Frontend building and running
+
+- Access the ClientApp folder:
+
+```shell
+cd ClientApp
 ```
+
+- Installing the dependencies and building the project:
+
+```shell
+npm install
+```
+
+- NOTE: If the installation fails with error E401, simply delete the package-lock.json file and run the command above again.
+
+- Run the project:
+
+```shell
+npm start
+```
+
+- NOTE: In Windows systems, it is possible that Node.js requires access to your private and public networks. Just check both and allow it.
+
+- The application should be automatically presented via your default web browser. If it doesn't happen, you can acess it at
+
+```text
+http://localhost:3000
+```
+
 
 ## Information about the Hangman Game user interface:
 
