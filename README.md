@@ -23,7 +23,7 @@ It consists of a Java backend and a JavaScript frontend and will be submitted as
 2. [Maven](https://maven.apache.org/download.cgi);
 3. [Node Package Manager (npm)](https://nodejs.org/en/download/);
 4. Your preferred Text Editor or IDE;
-5. It is required that the JAVA_HOME and PATH variables are correctly set. The Java bin folder path should be added to the PATH variable, meanwhile the root Java folder path should be added to the JAVA_HOME variable.
+5. It is required that the JAVA_HOME and PATH variables are correctly set. The Java bin folder path should be added to the PATH variable, meanwhile the root Java folder path should be added to the JAVA_HOME variable. Maven and Node paths should be added automatically to the PATH variable during installation. If it doesn't happen, you must also add them manually.
 6. It is important to run and maintain the execution of the backend before running the frontend.
 
 
